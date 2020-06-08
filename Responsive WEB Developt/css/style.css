@@ -1,0 +1,568 @@
+
+body{
+    margin: 0;
+    padding:0;
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Segoe UI',sans-serif;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.cabecalho{
+    background-image: url("../img/header.jpg");
+    height: 100vh;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 2;
+}
+h1::after{
+    content:'|';
+    margin-left:5px;
+    opacity: 1;
+    color:#06eac3;
+    animation: pisco .7s infinite;
+}
+@keyframes pisco{
+    0%,100%{
+        opacity:1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+.cabecalho nav img{
+    width:150px;
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overlay{
+    position:absolute;
+    width: 100%;
+}
+
+.container nav ul{
+    margin-top: 0;
+}
+nav ul li{
+    display:inline-block;
+    line-height: 50px;
+    margin: 0 15px;
+}
+
+.cabecalho nav ul li a {
+    position: relative;
+    padding: 5px 0;
+    color: #fff;
+    font-size:1.8em;
+    font-weight: 700;
+    text-decoration: none;
+}
+.cabecalho nav ul li a::after{
+    content: '';
+    display:block;
+    width:0;
+    height: 2px;
+    background-color: #06eac3;
+    transition: width .3s;
+}
+.cabecalho nav ul li a:hover::after{
+    width:100%;
+    transition: width .3s;
+}
+
+.cabecalho nav ul li a::before{
+    content: '';
+    display:block;
+    width:0;
+    height: 2px;
+    background-color: #06eac3;
+    transition: width .3s;
+}
+.cabecalho nav ul li a:hover::before{
+    width:100%;
+    transition: width .3s;
+}
+label .bars,label .times{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    margin-right: 30px;
+    cursor: pointer;
+    display:none;
+}
+#res-menu{
+    display:none;
+}
+
+.cabecalho h1{
+    color: #fff;
+    font-weight: 700;
+    font-size: 6em;
+    width: 500px;
+    margin-top: 50px;
+}
+.cabecalho p{
+    color: #06eac3;
+    font-size:2em;
+    font-weight: 300;
+    width: 600px;
+}
+.arrow{
+    display: flex;
+    justify-content: center;
+}
+.arrow img{
+    width: 80px;
+    cursor: pointer;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    transition: .5s;
+    background-size: cover;
+    height: 1000px;
+}
+section h2{
+    color: #fff;
+    border-bottom: 1px solid #06eac3;
+    font-size: 3em;
+    padding-top: 100px;
+    display: inline-block;
+
+}
+section p{
+    color: #fff;
+    font-size: 14pt;
+    width:70%;
+    margin-top: 50px;
+
+}
+.paragrafo{
+    display:flex;
+}
+#who{
+
+    background-image: url("../img/section1.png");
+    background-attachment: fixed;
+}
+h2{
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+#who p{
+    padding-right: 50px;
+}
+#who .paragrafo,#solution .paragrafo{
+    justify-content:flex-end;
+}
+
+#problem{
+    background-image: url("../img/section2.png");
+    background-attachment: fixed;
+}
+
+#problem .title{
+    display:flex;
+    justify-content:flex-end;
+    margin-right: 50px;
+}
+#problem p{
+    padding-left: 50px;
+}
+
+#solution{
+    background-image: url("../img/section3.png");
+    background-attachment: fixed;
+
+}
+#quemSomos{
+    background-image: url("../img/espiral.png");
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+    transition: .5s;
+    background-size: cover;
+    background-position: center;
+}
+#quemSomos .container{
+    width: 100%;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+#quemSomos .container img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+#quemSomos .quemH2{
+    text-align: center;
+}
+#quemSomos .container div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+}
+
+#quemSomos .container div p{
+    padding-bottom: 50px;
+}
+#contact{
+    height:800px;
+    background-color: rgba(23,23,23);
+}
+
+.formulario h2{
+    color: #06eac3;
+}
+.talk{
+    display:flex;
+    justify-content: space-between;
+}
+.talk p{
+    margin-left: 50px;
+    width: 350px;
+
+}
+
+form{
+    margin-right: 200px;
+    text-align: center;
+    width: 400px;
+}
+input[type="text"],input[type="tel"],input[type="email"],textarea{
+    border: 3px solid #06eac3;
+    border-radius: 50px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 15px;
+    outline: none;
+}
+input[type="submit"]{
+    outline: none;
+    color: #000;
+    padding:15px;
+    margin-left: 15px;
+    border: 3px solid #fff;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 50px;
+    background-color: #06eac3;
+    width: 200px;
+    cursor: pointer;
+
+}
+::-webkit-input-placeholder{
+    color: #06eac3;
+    font-weight: bold;
+}
+footer img{
+    width:200px;
+    height:80px;
+}
+footer .icons{
+    height: 50px;
+    width: 50px;
+}
+footer div{
+    width: 200px;
+    display:flex;
+    justify-content:space-between;
+}
+footer p{
+    text-align: center;
+    color: #fff;
+    font-style: italic;
+}
+footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(6, 234, 195);
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+
+@media(max-width:1400px){
+    .cabecalho h1{
+        font-size: 3.3em;
+        width: 90%;
+    }
+}
+
+@media(max-width:1200px){
+    .cabecalho nav{
+        position: fixed;
+        width: 90%;
+        margin: auto;
+        margin-top: -120px;
+    }
+
+    .cabecalho nav img{
+        width:100px;
+    }
+
+    .cabecalho h1{
+        margin-top: 120px;
+        font-size: 4em;
+        width: 90%;
+    }
+    .cabecalho p{
+        font-size: 2em;
+        width: 90%;
+    }
+    label .bars{
+        display:block;
+        background-image: url("../img/menu-button-of-three-horizontal-lines.png");
+    }
+    nav ul{
+        position:fixed;
+        width:100%;
+        height: 100vh;
+        background:rgba(0,0,0,.8);
+        top: 100px;
+        left: 100%;
+        text-align: center;
+        transition: .5s;
+        z-index: 10;
+    }
+    nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    #res-menu:checked ~ ul{
+        left: 0;
+    }
+    #res-menu:checked ~ label .bars{
+        display:none;
+        transition: .5s;
+    }
+    #res-menu:checked ~ label .times,label .bars{
+        background-position: center;
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+    }
+    #res-menu:checked ~ label .times{
+        display:block;
+        background-image: url(../img/iconfinder_icon-close-round_211651.png);
+    }
+    .cabecalho nav img{
+        width:120px;
+    }
+    .arrow{
+        margin-top: 100px;
+    }
+    .cabecalho h1{
+        font-size: 3em;
+        width: 50%;
+    }
+    .cabecalho p{
+        width: 70%;
+        font-size:1.8em;
+    }
+    #contact{
+        height: 900px;
+    }
+    .talk{
+        margin: 0;
+        justify-content:center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .talk p{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    form{
+        margin-right: 30px;
+        text-align: center;
+        width: 350px;  }
+
+
+}
+
+@media(max-width:800px){
+    .cabecalho nav img{
+        width:100px;
+    }
+    .cabecalho p{
+        font-size:1.5em;
+    }
+    .paragrafo{
+        justify-content:center;
+    }
+    section{
+        text-align: center;
+    }
+    section h2{
+        font-size: 2em;
+        margin: 0;
+    }
+    section p{
+        margin: auto;
+        padding-top:30px;
+        width: 90%;
+    }
+    #quemSomos .container div p{
+        padding-bottom: 0px;
+    }
+
+    #who p{
+        padding-right: 0px;
+    }
+    #problem p{
+        padding-left: 0px;
+    }
+    #problem h2{
+        margin-left: 0px !important;
+    }
+    #problem .title{
+        justify-content:center;
+        margin-right: 0px;
+    }
+    .talk p{
+        margin: auto;
+    }
+    form{
+        text-align: center;
+        width: 300px;
+        margin-right: 30px;
+        margin-top: 30px;
+    }
+
+
+}
+
+@media(max-width:650px){
+    nav ul li a {
+        font-size: 2em !important;
+    }
+    .cabecalho h1{
+        font-size: 3.5em;
+        width: 80%;
+    }
+    .cabecalho p{
+        width: 80%;
+        font-size:1.5em;
+    }
+    #solution{
+        height: auto;
+        padding-bottom: 50px;
+    }
+    #quemSomos{
+        padding-bottom: 50px;
+    }
+    form{
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+    input[type="text"],input[type="tel"],input[type="email"],textarea{
+        width: 300px;
+    }
+}
+
+@media(max-width:610px){
+
+
+    .arrow img{
+        width: 60px;
+        margin-top: 0px;
+    }
+
+    section{
+        height: 700px;
+    }
+    #quemSomos .container div{
+        display: flex;
+        width: 400px;
+    }
+
+    .talk p{
+        margin: auto;
+    }
+    input[type="text"],input[type="tel"],input[type="email"],textarea{
+        width: 250px;
+    }
+    footer{
+        flex-wrap: wrap;
+    }
+    footer p{
+        margin-top: 20px;
+        margin-bottom: 20px;;
+    }
+
+}
+@media(max-width:400px){
+    .cabecalho p{
+        font-size:1.5em;
+    }
+    .paragrafo{
+        justify-content:center;
+    }
+    section{
+        text-align: center;
+        height:900px;
+    }
+    section h2{
+        font-size: 2em;
+        margin: 0;
+    }
+    section p{
+        margin: auto;
+        padding-top:30px;
+        width: 90%;
+    }
+    #who p{
+        padding-right: 0px;
+    }
+    #problem p{
+        padding-left: 0px;
+    }
+    #problem h2{
+        margin-left: 0px !important;
+    }
+    #quemSomos .container div{
+        width: 300px;
+    }
+
+}
+::-webkit-scrollbar-track {
+    background-color: #000;
+    width: 20px;
+}
+::-webkit-scrollbar {
+    width:15px;
+    background: #f00;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #06eac3;
+}
